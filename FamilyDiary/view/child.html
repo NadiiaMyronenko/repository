@@ -1,0 +1,13 @@
+<?php include "header.html" ?>
+
+<?php if(!empty($data)) { ?>
+    <?php include "taskTable.html" ?>
+<?php } ?>
+
+<?php if(empty($data)) { ?>
+    <h3>No tasks yet. Please wait.</h3>
+<?php } ?>
+
+<a href="../base/signOut">Sign Out</a>
+
+<?php include "footer.html" ?>

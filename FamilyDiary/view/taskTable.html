@@ -1,0 +1,15 @@
+<table>
+    <tr>
+        <th>Task</th>
+        <th>Done</th>
+    </tr>
+    <?php foreach ($data as $val) { ?>
+    <tr>
+        <form action="done" method="post">
+            <input type="hidden" name="id_task" value="<?=$val['id_task']?>">
+            <td><?=$val['task']?></td>
+            <td><input type="submit" id="done" name="done" value='Done' class="button-done"></td>
+        </form>
+    </tr>
+    <?php } ?>
+</table>

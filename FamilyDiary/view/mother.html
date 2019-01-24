@@ -1,0 +1,24 @@
+<?php include "header.html" ?>
+
+<?php if($this->hasFlashMessage()){?>
+    <h3><?php echo $this->getFlashMessage();?></h3>
+<?php } ?>
+
+<h3>Add file with housework</h3>
+<form action="uploadFile" method="post" enctype="multipart/form-data">
+    <label class="label-for-file">Please use the .txt file. <br>
+                    Write down each task with a semicolon ';'</label><br>
+    <input type="file" name="filename">
+    <input type="submit" value="Upload">
+</form>
+<br>
+
+<?php if(!empty($data)) { ?>
+<?php include "taskTable.html" ?>
+<?php } ?>
+
+<br>
+<a href="../base/signOut">Sign Out</a>
+
+<?php include "footer.html" ?>
+

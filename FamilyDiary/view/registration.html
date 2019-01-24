@@ -1,0 +1,19 @@
+<?php include "header.html" ?>
+
+<a href="/FamilyDiary/base/signIn">Sign In</a>
+
+<form action="" method="post">
+    <label for="name">Name:</label><br>
+    <input type="text" name="name" id="name" placeholder="Your name"><br>
+    <label for="password">Password:</label><br>
+    <input type="text" name="password" id="password" placeholder="Your password"><br>
+    <input type="radio" id="mother" name="role" value="mother"checked>
+    <label for="mother">Mother</label><br>
+    <input type="radio" id="father" name="role" value="father">
+    <label for="father">Father</label><br>
+    <input type="radio" id="child" name="role" value="child">
+    <label for="child">Child</label><br>
+    <input type="submit" value="OK">
+</form>
+
+<?php include "footer.html" ?>

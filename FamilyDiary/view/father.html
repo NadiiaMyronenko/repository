@@ -1,0 +1,32 @@
+<?php include "header.html" ?>
+
+<form action="father/distributeTask" method="post">
+<?php foreach($data as $task){ ?>
+
+    <table class="distribute-task">
+        <tr>
+            <td>
+                <label><?=$task['task']?></label>
+            </td>
+
+            <?php foreach($users as $user){ ?>
+                <td>
+                    <label for="<?=$task['id']?><?=$user['id']?>"><?=$user['name']?></label>
+                    <input type="radio" name="<?=$task['id']?>" id="<?=$task['id']?><?=$user['id']?>" value="<?=$user['id']?>" checked>
+                </td>
+            <?php } ?>
+
+            <br>
+        </tr>
+
+    </table>
+    <?php } ?>
+    <br>
+
+    <input type="submit" value="Save">
+</form>
+<br><br>
+
+<a href="base/signOut">Sign Out</a>
+
+<?php include "footer.html" ?>

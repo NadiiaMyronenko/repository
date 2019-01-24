@@ -1,0 +1,22 @@
+table {
+    border-collapse: collapse;
+    width: 500px;
+}
+
+table, th, td {
+    border: 2px solid black;
+}
+
+.button-done {
+    color: green;
+}
+
+.distribute-task {
+    width: 800px;
+}
+
+.label-for-file {
+    color: red;
+    font-size: 14px;
+}
+
